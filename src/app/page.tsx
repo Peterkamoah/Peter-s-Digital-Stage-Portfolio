@@ -159,9 +159,6 @@ const PortfolioPage = () => {
             <p className="text-lg md:text-2xl text-muted-foreground mb-8 font-headline">
               Mathematics Student & Software Developer
             </p>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Combining mathematical precision with programming creativity at KNUST
-            </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -183,9 +180,15 @@ const PortfolioPage = () => {
 
       <section id="about" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className={cn("text-4xl font-bold text-center mb-16 bg-gradient-to-r from-accent to-purple bg-clip-text text-transparent", "font-headline")}>
+          <h2 className={cn("text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent to-purple bg-clip-text text-transparent", "font-headline")}>
             About Me
           </h2>
+
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-16">
+            I am a dedicated and curious third-year student pursuing a Bachelor's degree in Mathematics at the prestigious Kwame Nkrumah University of Science and Technology (KNUST). My academic journey is fueled by a deep fascination with the elegant logic of mathematics and its powerful applications in the world of technology.
+            <br/><br/>
+            Beyond theory, I am an aspiring software developer with hands-on experience in web technologies and programming. I thrive in collaborative environments and am driven by a desire to solve complex problems.
+          </p>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center md:justify-start mb-8 md:mb-0">
@@ -205,7 +208,7 @@ const PortfolioPage = () => {
                 <h3 className={cn("text-2xl font-semibold mb-4 text-accent", "font-headline")}>Education</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold font-headline">Bachelor's in Mathematics (2nd Year)</h4>
+                    <h4 className="font-semibold font-headline">Bachelor's in Mathematics (3rd Year)</h4>
                     <p className="text-muted-foreground">Kwame Nkrumah University of Science and Technology</p>
                   </div>
                   <div>
