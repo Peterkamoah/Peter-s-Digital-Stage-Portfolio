@@ -143,7 +143,7 @@ const PortfolioPage = () => {
             <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto mb-6 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple rounded-full animate-pulse opacity-75"></div>
               <Image 
-                src="https://drive.google.com/uc?export=view&id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
+                src="https://drive.google.com/uc?id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
                 alt="Peter Amoah Mensah"
                 width={160}
                 height={160}
@@ -189,7 +189,7 @@ const PortfolioPage = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <Image 
-                  src="https://drive.google.com/uc?export=view&id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
+                  src="https://drive.google.com/uc?id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
                   alt="Peter Amoah Mensah at work"
                   width={320}
                   height={320}
