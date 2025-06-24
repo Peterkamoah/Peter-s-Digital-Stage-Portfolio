@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Github, Mail, Phone, Code, Book, Award, ChevronDown, Calculator, Database, BarChart3, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
 const PortfolioPage = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -118,6 +118,9 @@ const PortfolioPage = () => {
               </button>
             </SheetTrigger>
             <SheetContent side="left" className="bg-background/95 backdrop-blur-xl w-4/5 p-0">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              </SheetHeader>
               <nav className="flex flex-col items-center justify-center h-full">
                 <div className="flex flex-col space-y-8 text-center">
                   {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
