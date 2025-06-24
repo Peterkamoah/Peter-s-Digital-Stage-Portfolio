@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Github, Mail, Phone, Code, Book, Award, ChevronDown, Calculator, Database, BarChart3 } from 'lucide-react';
+import { Github, Mail, Phone, Code, Book, Award, ChevronDown, Calculator, Database, BarChart3, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const PortfolioPage = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,13 +81,15 @@ const PortfolioPage = () => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+      setMobileMenuOpen(false);
     };
     return <a href={`#${targetId}`} onClick={handleClick} className="cursor-pointer">{children}</a>;
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-purple-deep to-background text-foreground overflow-x-hidden">
-      <nav className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
+      {/* Desktop Nav */}
+      <nav className={`hidden md:flex fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background/50 backdrop-blur-md' : 'bg-transparent'
       } rounded-full px-6 py-3 border border-foreground/20`}>
         <div className="flex space-x-6">
@@ -101,27 +105,58 @@ const PortfolioPage = () => {
         </div>
       </nav>
 
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Mobile Nav */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-foreground/20">
+        <div className="flex items-center justify-between h-16 px-4">
+          <ScrollToSection targetId="home">
+            <span className="font-bold font-headline text-accent">Peter A. Mensah</span>
+          </ScrollToSection>
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <button aria-label="Open Menu" className="p-1">
+                <Menu />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-background/95 backdrop-blur-xl w-4/5 p-0">
+              <nav className="flex flex-col items-center justify-center h-full">
+                <div className="flex flex-col space-y-8 text-center">
+                  {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+                    <ScrollToSection key={section} targetId={section}>
+                      <span className={cn('capitalize transition-colors duration-200 text-2xl font-headline',
+                        activeSection === section ? 'text-accent' : 'text-foreground/70 hover:text-foreground'
+                      )}>
+                        {section}
+                      </span>
+                    </ScrollToSection>
+                  ))}
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 md:pt-0">
         <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/10 animate-pulse"></div>
         <div className="text-center z-10 px-4">
           <div className="mb-8">
-            <div className="w-40 h-40 mx-auto mb-6 relative group">
+            <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto mb-6 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple rounded-full animate-pulse opacity-75"></div>
               <Image 
                 src="/peter-mensah.jpg"
                 alt="Peter Amoah Mensah"
                 width={160}
                 height={160}
-                className="w-40 h-40 rounded-full object-cover border-4 border-foreground/20 shadow-2xl group-hover:scale-105 transition-transform duration-300 relative z-10"
+                className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-foreground/20 shadow-2xl group-hover:scale-105 transition-transform duration-300 relative z-10"
               />
             </div>
-            <h1 className={cn("text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-accent to-purple bg-clip-text text-transparent", "font-headline")}>
+            <h1 className={cn("text-4xl sm:text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-accent to-purple bg-clip-text text-transparent", "font-headline")}>
               Peter Amoah Mensah
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-headline">
+            <p className="text-lg md:text-2xl text-muted-foreground mb-8 font-headline">
               Mathematics Student & Software Developer
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Combining mathematical precision with programming creativity at KNUST
             </p>
           </div>
@@ -158,7 +193,7 @@ const PortfolioPage = () => {
                   alt="Peter Amoah Mensah at work"
                   width={320}
                   height={320}
-                  className="w-80 h-80 rounded-2xl object-cover shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
+                  className="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl object-cover shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
@@ -197,7 +232,7 @@ const PortfolioPage = () => {
             Technical Skills
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill) => (
               <div key={skill.name} className="bg-foreground/5 backdrop-blur-sm rounded-2xl p-6 border border-foreground/10 hover:border-accent/50 transition-all duration-300 transform hover:-translate-y-1">
                 <div className="flex items-center mb-4">
