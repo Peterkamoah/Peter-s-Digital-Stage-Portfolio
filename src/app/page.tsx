@@ -12,7 +12,6 @@ import Footer from '@/components/portfolio/Footer';
 const PortfolioPage = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,8 +44,6 @@ const PortfolioPage = () => {
         sections={SECTIONS}
         activeSection={activeSection}
         isScrolled={isScrolled}
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
       />
       <main>
         <HeroSection />
