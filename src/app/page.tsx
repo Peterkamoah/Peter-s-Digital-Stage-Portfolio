@@ -143,12 +143,11 @@ const PortfolioPage = () => {
             <div className="w-36 h-36 sm:w-40 sm:h-40 mx-auto mb-6 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple rounded-full animate-pulse opacity-75"></div>
               <Image 
-                src="https://placehold.co/160x160.png"
+                src="https://drive.google.com/uc?export=view&id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
                 alt="Peter Amoah Mensah"
                 width={160}
                 height={160}
                 className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-foreground/20 shadow-2xl group-hover:scale-105 transition-transform duration-300 relative z-10"
-                data-ai-hint="man portrait"
               />
             </div>
             <h1 className={cn("text-4xl sm:text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-accent to-purple bg-clip-text text-transparent", "font-headline")}>
@@ -190,12 +189,11 @@ const PortfolioPage = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <Image 
-                  src="https://placehold.co/320x320.png"
+                  src="https://drive.google.com/uc?export=view&id=18zoT5u-yZqOBoEjUSIH3qavisJklR3Qf"
                   alt="Peter Amoah Mensah at work"
                   width={320}
                   height={320}
                   className="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl object-cover shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
-                  data-ai-hint="man working"
                 />
               </div>
             </div>
