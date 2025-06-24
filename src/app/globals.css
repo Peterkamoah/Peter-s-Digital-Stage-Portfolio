@@ -64,3 +64,24 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .scroll-animate {
+    opacity: 0;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .scroll-animate.fade-in {
+    /* No transform needed, just opacity */
+  }
+  .scroll-animate.slide-in-from-bottom {
+    transform: translateY(30px);
+  }
+  .scroll-animate.zoom-in {
+    transform: scale(0.9);
+  }
+
+  .scroll-animate.is-in-view {
+    opacity: 1;
+    transform: none;
+  }
+}
