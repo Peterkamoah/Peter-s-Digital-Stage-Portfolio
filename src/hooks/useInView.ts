@@ -3,7 +3,6 @@
 import { useState, useEffect, type RefObject } from 'react';
 
 interface Options extends IntersectionObserverInit {
-  triggerOnce?: boolean;
 }
 
 export function useInView(ref: RefObject<Element>, options?: Options): boolean {
@@ -15,9 +14,13 @@ export function useInView(ref: RefObject<Element>, options?: Options): boolean {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
-        if (entry.isIntersecting && options?.triggerOnce) {
-          observer.unobserve(element);
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        } else {
+          // Reset only when the element is below the viewport (scrolling up)
+          if (entry.boundingClientRect.top > 0) {
+            setIsInView(false);
+          }
         }
       },
       {
