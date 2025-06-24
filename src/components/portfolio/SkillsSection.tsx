@@ -23,12 +23,13 @@ const SkillCard = ({ skill, delay }: { skill: Skill, delay: number }) => {
                 <skill.icon size={24} className="text-accent mr-3" />
                 <h3 className="font-semibold font-headline">{skill.name}</h3>
             </div>
-            <div className="w-full bg-muted rounded-full h-2.5">
+            <div className="w-full bg-muted rounded-full h-2.5 overflow-hidden">
                 <div 
-                    className="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full"
+                    className="bg-gradient-to-r from-accent to-primary h-2.5 rounded-full origin-left"
                     style={{ 
-                        width: cardInView ? `${skill.level}%` : '0%',
-                        transition: 'width 1s ease-out',
+                        width: `${skill.level}%`,
+                        transform: cardInView ? 'scaleX(1)' : 'scaleX(0)',
+                        transition: 'transform 1s ease-out',
                         transitionDelay: '300ms',
                     }}
                 ></div>
