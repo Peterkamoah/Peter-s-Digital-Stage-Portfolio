@@ -11,8 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        headline: ['"Space Grotesk"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -48,6 +47,9 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        'purple-deep': 'hsl(var(--purple-deep))',
+        purple: 'hsl(var(--purple))',
+        warning: 'hsl(var(--warning))',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
