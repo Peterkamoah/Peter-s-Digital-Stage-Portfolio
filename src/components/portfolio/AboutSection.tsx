@@ -34,19 +34,22 @@ const AboutSection = () => {
                     About Me
                 </h2>
 
-                <p 
+                <div 
                     ref={textRef}
                     className={cn(
-                        "text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-16",
+                        "text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-16 space-y-6",
                         "scroll-animate slide-in-from-bottom",
                         { 'is-in-view': textInView }
                     )}
                     style={{ transitionDelay: '150ms' }}
                 >
-                    I am a dedicated and curious third-year student pursuing a Bachelor's degree in Mathematics at the prestigious Kwame Nkrumah University of Science and Technology (KNUST). My academic journey is fueled by a deep fascination with the elegant logic of mathematics and its powerful applications in the world of technology.
-                    <br/><br/>
-                    Beyond theory, I am an aspiring software developer with hands-on experience in web technologies and programming. I thrive in collaborative environments and am driven by a desire to solve complex problems.
-                </p>
+                    <p>
+                        I am a dedicated and curious third-year student pursuing a Bachelor's degree in Mathematics at the prestigious Kwame Nkrumah University of Science and Technology (KNUST). My academic journey is fueled by a deep fascination with the elegant logic of mathematics and its powerful applications in the world of technology.
+                    </p>
+                    <p>
+                        Beyond theory, I am an aspiring software developer with hands-on experience in web technologies and programming. I thrive in collaborative environments and am driven by a desire to solve complex problems.
+                    </p>
+                </div>
                 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div 
@@ -66,6 +69,7 @@ const AboutSection = () => {
                                 width={320}
                                 height={320}
                                 className="w-72 h-72 sm:w-80 sm:h-80 rounded-2xl object-cover shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
+                                data-ai-hint="portrait man"
                             />
                         </div>
                     </div>

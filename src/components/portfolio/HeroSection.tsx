@@ -44,6 +44,7 @@ const HeroSection = () => {
                             height={160}
                             priority
                             className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-foreground/20 shadow-2xl group-hover:scale-105 transition-transform duration-300 relative z-10"
+                            data-ai-hint="portrait man"
                         />
                     </div>
                 </div>
