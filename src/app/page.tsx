@@ -108,11 +108,10 @@ const PortfolioPage = () => {
             <div className="w-40 h-40 mx-auto mb-6 relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple rounded-full animate-pulse opacity-75"></div>
               <Image 
-                src="https://placehold.co/160x160.png"
+                src="/peter-mensah.jpg"
                 alt="Peter Amoah Mensah"
                 width={160}
                 height={160}
-                data-ai-hint="profile portrait"
                 className="w-40 h-40 rounded-full object-cover border-4 border-foreground/20 shadow-2xl group-hover:scale-105 transition-transform duration-300 relative z-10"
               />
             </div>
@@ -155,11 +154,10 @@ const PortfolioPage = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/30 to-purple/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <Image 
-                  src="https://placehold.co/320x320.png"
+                  src="/peter-mensah.jpg"
                   alt="Peter Amoah Mensah at work"
                   width={320}
                   height={320}
-                  data-ai-hint="person working"
                   className="w-80 h-80 rounded-2xl object-cover shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
