@@ -7,7 +7,7 @@ import { useInView } from '@/hooks/useInView';
 
 const SkillCard = ({ skill, delay }: { skill: Skill, delay: number }) => {
     const cardRef = useRef(null);
-    const cardInView = useInView(cardRef, { triggerOnce: true });
+    const cardInView = useInView(cardRef);
 
     return (
         <div 
@@ -40,7 +40,7 @@ const SkillCard = ({ skill, delay }: { skill: Skill, delay: number }) => {
 
 const SkillsSection = () => {
     const titleRef = useRef(null);
-    const titleInView = useInView(titleRef, { triggerOnce: true });
+    const titleInView = useInView(titleRef);
 
     return (
         <section id="skills" className="py-20 px-4 bg-black/20">

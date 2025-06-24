@@ -22,10 +22,10 @@ const HeroSection = () => {
     const buttonsRef = useRef(null);
     const chevronRef = useRef(null);
 
-    const imageInView = useInView(imageRef, { triggerOnce: true, threshold: 0.5 });
-    const titleInView = useInView(titleRef, { triggerOnce: true, threshold: 0.5 });
-    const buttonsInView = useInView(buttonsRef, { triggerOnce: true, threshold: 0.5 });
-    const chevronInView = useInView(chevronRef, { triggerOnce: true, threshold: 0.5 });
+    const imageInView = useInView(imageRef, { threshold: 0.5 });
+    const titleInView = useInView(titleRef, { threshold: 0.5 });
+    const buttonsInView = useInView(buttonsRef, { threshold: 0.5 });
+    const chevronInView = useInView(chevronRef, { threshold: 0.5 });
 
     return (
         <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 md:pt-0">

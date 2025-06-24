@@ -14,11 +14,11 @@ const AboutSection = () => {
     const educationRef = useRef(null);
     const leadershipRef = useRef(null);
 
-    const titleInView = useInView(titleRef, { triggerOnce: true, threshold: 0.5 });
-    const textInView = useInView(textRef, { triggerOnce: true });
-    const imageInView = useInView(imageRef, { triggerOnce: true });
-    const educationInView = useInView(educationRef, { triggerOnce: true });
-    const leadershipInView = useInView(leadershipRef, { triggerOnce: true });
+    const titleInView = useInView(titleRef, { threshold: 0.5 });
+    const textInView = useInView(textRef);
+    const imageInView = useInView(imageRef);
+    const educationInView = useInView(educationRef);
+    const leadershipInView = useInView(leadershipRef);
 
     return (
         <section id="about" className="py-20 px-4">

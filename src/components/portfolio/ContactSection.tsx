@@ -12,11 +12,11 @@ const ContactSection = () => {
     const phoneRef = useRef(null);
     const collabRef = useRef(null);
 
-    const titleInView = useInView(titleRef, { triggerOnce: true });
-    const emailInView = useInView(emailRef, { triggerOnce: true });
-    const githubInView = useInView(githubRef, { triggerOnce: true });
-    const phoneInView = useInView(phoneRef, { triggerOnce: true });
-    const collabInView = useInView(collabRef, { triggerOnce: true });
+    const titleInView = useInView(titleRef);
+    const emailInView = useInView(emailRef);
+    const githubInView = useInView(githubRef);
+    const phoneInView = useInView(phoneRef);
+    const collabInView = useInView(collabRef);
 
     return (
         <section id="contact" className="py-20 px-4 bg-black/20">

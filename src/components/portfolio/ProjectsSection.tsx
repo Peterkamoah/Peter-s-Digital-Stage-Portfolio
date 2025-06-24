@@ -8,7 +8,7 @@ import { useInView } from '@/hooks/useInView';
 
 const ProjectCard = ({ project, delay }: { project: Project, delay: number }) => {
     const cardRef = useRef(null);
-    const cardInView = useInView(cardRef, { triggerOnce: true });
+    const cardInView = useInView(cardRef);
 
     return (
         <div 
@@ -41,7 +41,7 @@ const ProjectCard = ({ project, delay }: { project: Project, delay: number }) =>
 
 const ProjectsSection = () => {
     const titleRef = useRef(null);
-    const titleInView = useInView(titleRef, { triggerOnce: true });
+    const titleInView = useInView(titleRef);
     
     return (
         <section id="projects" className="py-20 px-4">
