@@ -6,9 +6,9 @@ const Footer = () => {
 
     return (
         <footer className="py-8 px-4 border-t border-foreground/10 mt-20">
-            <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p className="text-muted-foreground text-sm text-center sm:text-left">&copy; {new Date().getFullYear()} Peter Amoah Mensah. Built with React and a passion for mathematics.</p>
-                <div className="flex items-center gap-4">
+            <div className="max-w-6xl mx-auto flex flex-col items-center gap-2">
+                <p className="text-muted-foreground text-sm text-center">&copy; {new Date().getFullYear()} Peter Amoah Mensah. Built with React and a passion for mathematics.</p>
+                <div className="flex items-center gap-3">
                     <a 
                         href={instagramUrl}
                         target="_blank" 
